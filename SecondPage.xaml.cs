@@ -21,11 +21,11 @@ public partial class SecondPage : ContentPage
                 }
            };
 
-        //Unloaded += (s, e) =>
-        //{
-        //    // Disconnecting hanlder causes casting exception
-        //    MyChart.Handler?.DisconnectHandler();
-        //};
+        Unloaded += (s, e) =>
+        {
+            // Disconnecting handler causes casting exception
+            MyChart.Handler?.DisconnectHandler();
+        };
     }
 
     ~SecondPage()
